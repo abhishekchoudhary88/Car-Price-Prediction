@@ -4,8 +4,9 @@ import numpy as np
 import datetime
 
 # ================= LOAD TRAINED MODEL =================
-with open("car_price_model.pkl", "rb") as f:
-    model = pickle.load(f)
+import joblib
+
+model = joblib.load("car_price_model.joblib")
 
 # ================= PAGE CONFIG =================
 st.set_page_config(
